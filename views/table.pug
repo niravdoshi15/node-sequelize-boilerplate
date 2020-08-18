@@ -1,0 +1,17 @@
+html
+  head
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    title= data.title
+  body
+    h2.strong= data.header
+    table.table
+      thead
+        th= 'Person'
+        th= 'Group'
+        th= 'Age'
+      tbody
+        each user in data.users
+          tr
+            td= user.dataValues.person
+            td= user.dataValues.group_id
+            td= user.dataValues.age
